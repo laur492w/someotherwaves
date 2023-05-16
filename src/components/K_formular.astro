@@ -1,0 +1,218 @@
+<main>
+  <form name="kontakt" netlify>
+    <!-- Formular-indhold -->
+    <div class="kontakt_grid1-1">
+      <div class="form-felt">
+        <label for="full-name">Fulde navn</label>
+        <input id="full-name" name="fname" type="text" required />
+      </div>
+
+      <div class="form-felt">
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" required />
+      </div>
+    </div>
+
+    <div class="form-felt">
+      <label for="adresse">Adresse</label>
+      <input id="adresse" name="adresse" type="text" required />
+    </div>
+
+    <div class="kontakt_grid1-1">
+      <div class="form-felt">
+        <label>Hvad ønsker du malet?</label>
+        <label class="container"
+          >Loft
+          <input type="radio" checked="checked" name="radio" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"
+          >Væg
+          <input type="radio" name="radio" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"
+          >Loft og væg
+          <input type="radio" name="radio" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"
+          >Andet
+          <input type="radio" name="radio" />
+          <span class="checkmark"></span>
+        </label>
+        <!--
+            <label class="form-control">
+              <input type="radio" name="radio">
+              Loft
+            </label>
+
+            <label class="form-control">
+              <input type="radio" name="radio">
+              Væg
+            </label>
+
+            <label class="form-control">
+              <input type="radio" name="radio">
+              Loft og væg
+            </label>
+
+            <label class="form-control">
+              <input type="radio" name="radio">
+              Andet (angiv i 'ønsker til værket')
+            </label> -->
+      </div>
+
+      <div class="form-felt">
+        <label for="kvm">Angiv antal kvm^2 i alt</label>
+        <input id="kvm" name="kvm" type="number" class="boks_kvm" required />
+      </div>
+    </div>
+
+    <!-- Fjerner div for at boksen går helt ud til kanterne -->
+    <div class="form-felt">
+      <label>
+        Eventuelle ønsker til værket <br />
+        <textarea name="besked" rows="5" class="boks"></textarea>
+      </label>
+    </div>
+
+    <button>SEND DIN FORESPØRGSEL</button>
+  </form>
+</main>
+
+<style>
+  /* Dine styles her */
+  main {
+    max-width: 1000px;
+    margin-inline: auto;
+    padding-inline: 2rem;
+    margin-block: 3rem;
+  }
+
+  orm {
+    display: grid;
+    padding: 5rem 12rem 5rem 12rem;
+    border-radius: 0px;
+    gap: 20px;
+  }
+
+  .form-felt {
+    display: grid;
+  }
+
+  /*** gør så det rykker sig på næste linje ***/
+  label,
+  textarea,
+  select,
+  button {
+    display: block;
+    margin: 0.2rem 1rem 0.2rem 1rem;
+    font-family: "graphie", sans-serif;
+    font-style: normal;
+  }
+
+  .boks {
+    border: solid 0.1rem var(--button-color);
+    padding: 1rem;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .boks_kvm {
+    border: solid 0.1rem var(--button-color);
+    padding: 1rem;
+    width: 82%;
+  }
+
+  input {
+    border-bottom: solid 0.1rem var(--button-color);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    margin: 0.2rem 4rem 3.2rem 1rem;
+  }
+
+  label {
+    font-size: 1.3rem;
+  }
+
+  .radio {
+    border-bottom: solid 0.1rem #f5b79d;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+  }
+
+  @media (min-width: 601px) {
+    .kontakt_grid1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  /* The container */
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.4rem;
+    width: 1.4rem;
+    border: solid darkblue;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: lightblue;
+  }
+
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: darkblue;
+  }
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+    top: 0.37rem;
+    left: 0.37rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: white;
+  }
+</style>
