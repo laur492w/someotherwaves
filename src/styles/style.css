@@ -1,0 +1,17 @@
+html {
+  --primary-color: white;
+  --secondary-color: blue;
+  --contrast-color: #e6a169;
+  --header-color: #ffeca6;
+  --text-color: #121236;
+}
+
+body {
+  background: var(--primary-color);
+  margin: 0%;
+}
+
+main {
+  /* padding: 3rem; */
+  padding-top: 0%;
+}
