@@ -4,15 +4,13 @@
 	 viewBox="0 0 93.18 89.77" style="enable-background:new 0 0 93.18 89.77;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#FFFFFF;}
-	.st1{fill:#0B121C;}
-	.st2{fill:#0B121C;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
+	.st1{fill:#2D519F;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
 </style>
 <path id="XMLID_1420_" class="st0" d="M41.64,60.59h6.1V45.32h4.25l0.45-5.11h-4.71c0,0,0-1.91,0-2.91c0-1.21,0.24-1.68,1.41-1.68
 	c0.94,0,3.3,0,3.3,0v-5.3c0,0-3.48,0-4.22,0c-4.54,0-6.58,2-6.58,5.82c0,3.33,0,4.08,0,4.08h-3.17v5.18h3.17V60.59z"/>
 <g>
 	<g>
-		<circle class="st1" cx="45.45" cy="44.32" r="38.66"/>
-		<circle class="st2" cx="45.45" cy="44.32" r="32.73"/>
+		<circle class="st1" cx="45.45" cy="44.32" r="32.73"/>
 	</g>
 	<path class="st0" d="M58.74,32.22c-0.31-0.69-0.96-1.08-1.83-1.08c-0.63,0-1.19,0.2-1.26,0.23c-0.19,0.07-18.59,7.11-26.14,10.2
 		c-0.66,0.27-1.09,0.65-1.27,1.14c-0.28,0.75,0.25,1.52,0.75,1.74c1.88,0.83,5.78,1.97,7,2.32c0.4,1.34,1.81,6.01,2.47,8.02
