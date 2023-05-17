@@ -1,21 +1,30 @@
 <main>
+  <form id="calculator">
+    <div class="beregn">
+      <input type="number" id="area" required />
+      <label for="area"> kvm^2</label>
+      <p id="result"></p>
+    </div>
+    <button type="submit">BEREGN</button>
+  </form>
+
   <form name="kontakt" netlify>
     <!-- Formular-indhold -->
     <div class="kontakt_grid1-1">
       <div class="form-felt">
         <label for="full-name">Fulde navn</label>
-        <input id="full-name" name="fname" type="text" required />
+        <input id="full-name" name="fname" type="text" class="input" required />
       </div>
 
       <div class="form-felt">
         <label for="email">E-mail</label>
-        <input id="email" name="email" type="email" required />
+        <input id="email" name="email" type="email" class="input" required />
       </div>
     </div>
 
     <div class="form-felt">
       <label for="adresse">Adresse</label>
-      <input id="adresse" name="adresse" type="text" required />
+      <input id="adresse" name="adresse" type="text" class="input" required />
     </div>
 
     <div class="kontakt_grid1-1">
@@ -63,15 +72,15 @@
             </label> -->
       </div>
 
-      <div class="form-felt">
+      <div class="form-felt kvm">
         <label for="kvm">Angiv antal kvm^2 i alt</label>
         <input id="kvm" name="kvm" type="number" class="boks_kvm" required />
       </div>
     </div>
 
     <!-- Fjerner div for at boksen går helt ud til kanterne -->
-    <div class="form-felt">
-      <label>
+    <div class="form-felt kontakt_grid1-1-1-1-1-1">
+      <label class="oensker">
         Eventuelle ønsker til værket <br />
         <textarea name="besked" rows="5" class="boks"></textarea>
       </label>
@@ -90,13 +99,6 @@
     margin-block: 3rem;
   }
 
-  orm {
-    display: grid;
-    padding: 5rem 12rem 5rem 12rem;
-    border-radius: 0px;
-    gap: 20px;
-  }
-
   .form-felt {
     display: grid;
   }
@@ -113,40 +115,106 @@
   }
 
   .boks {
-    border: solid 0.1rem var(--button-color);
-    padding: 1rem;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+    display: block;
+    margin: 0.2rem 1rem 0.2rem 0rem;
+    width: 100%;
+    height: 10rem;
+    resize: vertical;
   }
 
-  .boks_kvm {
+  .button .boks_kvm {
     border: solid 0.1rem var(--button-color);
     padding: 1rem;
     width: 82%;
   }
 
-  input {
+  button {
+    border: none;
+    background-color: var(--button-color);
+    border-radius: 25px;
+    padding: 1rem;
+    color: white;
+    font-family: "graphie", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .form-felt {
+    gap: 0; /* Add margin to the top of the input field */
+  }
+
+  .input {
     border-bottom: solid 0.1rem var(--button-color);
     border-top: none;
     border-left: none;
     border-right: none;
     outline: none;
-    margin: 0.2rem 4rem 3.2rem 1rem;
+    margin: 0.2rem 0rem 3.2rem 0rem;
   }
 
   label {
     font-size: 1.3rem;
   }
 
+  .kvm {
+    align-self: start;
+  }
+
+  .beregn {
+    display: flex;
+    justify-content: center;
+  }
+  form {
+    max-width: 1000px;
+    margin-inline: auto;
+    padding-inline: 2rem;
+    margin-block: 3rem;
+  }
+
+  label {
+    margin: 0.2rem 1rem 0.2rem 1rem;
+    font-family: "graphie", sans-serif;
+    font-style: normal;
+    font-size: 1.3rem;
+  }
+
+  button {
+    border: none;
+    background-color: var(--button-color);
+    border-radius: 25px;
+    padding: 1rem;
+    color: white;
+    font-family: "graphie", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @media (min-width: 601px) {
     .kontakt_grid1-1 {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .kontakt_grid1-1-1-1-1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .oensker {
+      grid-column: 2/5;
+      padding-top: 2rem;
+      padding-bottom: 3rem;
     }
   }
 
-  /* The container */
+  /* RADIO */
   .container {
     display: block;
     position: relative;
@@ -179,7 +247,7 @@
 
   /* On mouse-over, add a grey background color */
   .container:hover input ~ .checkmark {
-    background-color: rgb(98, 148, 234);
+    background-color: rgba(93, 122, 174, 0.38);
   }
 
   /* When the radio button is checked, add a blue background */
@@ -208,3 +276,14 @@
     background: white;
   } */
 </style>
+
+<script>
+  document.getElementById("calculator").addEventListener("submit", function (event) {
+    event.preventDefault(); // Forhindrer formen i at blive sendt
+
+    var area = parseFloat(document.getElementById("area").value);
+    var price = area * 1600;
+
+    document.getElementById("result").textContent = "Pris i danske kroner: " + price + " DKK";
+  });
+</script>

@@ -63,16 +63,3 @@ section {
   gap: 3rem;
   align-items: start;
 }
-
-button {
-  border: none;
-  background-color: var(--button-color);
-  border-radius: 25px;
-  padding: 1rem;
-  margin: 0rem 20rem 0rem 20rem;
-  color: white;
-  font-family: "graphie", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-  font-size: 1rem;
-}
