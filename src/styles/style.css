@@ -12,10 +12,6 @@ html {
   --button-color: #121236;
 }
 
-main {
-  padding: 3rem;
-}
-
 /* == Body styles == */
 body {
   background: var(--primary-color);
