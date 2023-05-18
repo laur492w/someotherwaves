@@ -1,60 +1,144 @@
-<div class="text_tittel">OM OS</div>
+<h1 class="text_tittel">OM OS</h1>
 
 <div class="container">
-  <div class="grid_1_1_omos">
-    <img src="public/omos.webp" width="600" height="auto" alt="piker" />
-    <p>
-      Some Other Waves består af et sæt tvillinge-søstre Carla og Bjørk. Vi har alltid elsket at være kreative sammen og det falder os helt naturlight at samarbejde om kunsten. Siden vi var helt små har vi været på sommerferie med vores familie,
-      rundt i det danske sommerland. Vi er derfor meget inspirerede af havet, dets farver, former og følelse. Det vi elsker alle mest ved det vi laver er at komme ud i en masse hjem og få lov til at sprede vores kunst ud i en masse hjem og få lov til
-      at sprede vores kunst ud og give glæde, farver og inspiration til hjemmet. Vi har også været rundt hos Kulturhuse og andre erhvervsdrivende, som er lige så fedt, fordi vi her kommer ud til endnu flere, og kan bruges endnu bredere.
-    </p>
+  <div class="grid">
+    <img src="public/billede om os.webp" width="500" height="auto" alt="Picture 1" class="image1" />
+    <p class="additional-text2">Some Other Waves består af et sæt tvillinge-søstre Carla og Bjørk. Vi har alltid elsket at være kreative sammen og det falder os helt naturlight at samarbejde om kunsten. Siden vi var helt små har vi været på sommerferie med vores familie, rundt i det danske sommerland. Vi er derfor meget inspirerede af havet, dets farver, former og følelse. Det vi elsker alle mest ved det vi laver er at komme ud i en masse hjem og få lov til at sprede vores kunst ud i en masse hjem og få lov til at sprede vores kunst ud og give glæde, farver og inspiration til hjemmet. Vi har også været rundt hos Kulturhuse og andre erhvervsdrivende, som er lige så fedt, fordi vi her kommer ud til endnu flere, og kan bruges endnu bredere.</p>
+    <button class="btn"> Click Me</button>
   </div>
-  <img src="someotherwaves_10.webp" width="600" height="auto" alt="Overlay image" class="overlay" />
-</div>
-
-<div class="container2">
-  <p>
-    Vi laver som regel lidt skitser inden, afhængig af kundens ønsker. Men ellers griber vi rimelig hurtight malerpensel og går i gang. Vi benytter økologisk maling, og vi blander vores farver med de helt grundlæggende primær farver. På den måde
-    bliver værket altid helt unikt. De organiske former får virkelig lov til at tage deres plads, når vi arbejder. Derudover er muslinger og de finurlige kroppe også alltid med os i vores værker. Vi elsker dog at eksperimentere og den kunsteriske
-    frihed er vigtig for os i vores proces og arbejde.
-  </p>
+  <img src="someotherwaves_10.webp" alt="Picture 2" class="overlay" />
+  <p class="additional-text">Vi laver som regel lidt skitser inden, afhængig af kundens ønsker. Men ellers griber vi rimelig hurtight malerpensel og går i gang. Vi benytter økologisk maling, og vi blander vores farver med de helt grundlæggende primær farver. På den måde bliver værket altid helt unikt. De organiske former får virkelig lov til at tage deres plads, når vi arbejder. Derudover er muslinger og de finurlige kroppe også alltid med os i vores værker. Vi elsker dog at eksperimentere og den kunsteriske frihed er vigtig for os i vores proces og arbejde.</p>
 </div>
 <style>
-  .container {
+  <style > .container {
     position: relative;
   }
 
   .grid {
-    position: relative;
-    width: 300px;
-    height: 200px;
-    background-color: gray;
-    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    padding: 20px;
   }
 
-  /* .overlay {
-    position: absolute;
-    top: 105%;
-    left: 72%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-  } */
+  .image1 {
+    width: 600px;
+    height: auto;
+  }
 
+  .overlay {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    z-index: 2;
+    width: 600px;
+    height: auto;
+  }
+
+  .additional-text {
+    margin-top: 20px;
+    padding: 20px;
+  }
+  .additional-text2 {
+    padding-right: 50px;
+  }
+
+  @media (min-width: 801px) {
+    .additional-text {
+      width: 45%;
+    }
+  }
+
+  /* BUTTON */ /*
+.btn {
+  background-color: #E7DED0;
+  color: #fff;
+  padding: 10px 120px;
+  border: none;
+  border-radius: 26px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+*/
+
+  @media (max-width: 800px) {
+    .grid {
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+    }
+
+    .overlay {
+      position: static;
+      display: block;
+      margin-top: 20px;
+    }
+
+    .additional-text {
+      width: 140%;
+    }
+    .additional-text2 {
+      width: 100%;
+      padding: 10px;
+      padding-top: 25px;
+    }
+  }
+  /*
+.container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 127%;
+  left: 72%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.grid_1_1_omos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  padding: 50px;
+  padding-left: 40px;
+}
+    p {
+        line-height: 2; 
+    }
+
+    .container2 {
+        padding-left: 80px;
+        width: 48%;
+        
+    }
+
+ /*   @media (min-width: 768px) {
   .grid_1_1_omos {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-gap: 51px;
+    grid-template-columns: 1fr 1fr;
     padding: 80px;
     padding-right: 100px;
   }
+}
 
-  p {
-    line-height: 2;
-  }
 
-  .container2 {
-    width: 50%;
-    padding-left: 80px;
-    padding-right: 40px;
+@media (max-width: 800px) {
+ 
+    .grid_1_1_omos {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    }
+    
+    .container2 {
+        width: 150%;
+        padding-left: 20px;
   }
+  .overlay {
+  display:none;
+  
+}
+}*/
 </style>
