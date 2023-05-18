@@ -4,30 +4,7 @@ console.log(data);
 ---
 
 <article>
-  <h2>{data.by}</h2>
+  <img src={"/gallery/" + data.img} alt={data.værk} />
   <h1>{data.sted}</h1>
-  <p></p>
+  <h2>{data.by}</h2>
 </article>
-
-// <script>
-  //https://drcfwrjeugkktxrsdgby.supabase.co
-  //eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRyY2Z3cmpldWdra3R4cnNkZ2J5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIzMzI0OTksImV4cCI6MTk5NzkwODQ5OX0.tVFF6acofD4-o5xDWJrDvCI41ayy7t1UhKHYklR7C0I
-
-  //   fetch(
-  //     "https://drcfwrjeugkktxrsdgby.supabase.co/rest/v1/some_other_waves?select=by,sted,værk,id",
-  //     {
-  //       method: "GET",
-  //       headers: {
-  //         apikey:
-  //           "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRyY2Z3cmpldWdra3R4cnNkZ2J5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIzMzI0OTksImV4cCI6MTk5NzkwODQ5OX0.tVFF6acofD4-o5xDWJrDvCI41ayy7t1UhKHYklR7C0I",
-  //       },
-  //     }
-  //   )
-  //     .then((res) => res.json())
-  //     .then(showData);
-
-  //   function showData(items) {
-  //     console.log(items); // items.forEach()
-  //   }
-  //
-</script>
