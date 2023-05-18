@@ -1,8 +1,8 @@
 <main>
   <form id="calculator">
     <div class="beregn">
-      <input type="number" id="area" required />
-      <label for="area"> kvm^2</label>
+      <input type="number" id="area" class="beregn2" required />
+      <label class="kvm_p" for="area"> kvm^2 =</label>
       <p id="result"></p>
     </div>
     <button type="submit">BEREGN</button>
@@ -109,14 +109,14 @@
   select,
   button {
     display: block;
-    margin: 0.2rem 1rem 0.2rem 1rem;
+    margin: 0.2rem 0rem 0.2rem 0rem;
     font-family: "graphie", sans-serif;
     font-style: normal;
   }
 
   .boks {
     display: block;
-    margin: 0.2rem 1rem 0.2rem 0rem;
+    margin: 0.2rem 0rem 0.2rem 0rem;
     width: 100%;
     height: 10rem;
     resize: vertical;
@@ -166,6 +166,7 @@
     display: flex;
     justify-content: center;
   }
+
   form {
     max-width: 1000px;
     margin-inline: auto;
@@ -174,7 +175,7 @@
   }
 
   label {
-    margin: 0.2rem 1rem 0.2rem 1rem;
+    margin: 0.2rem 0rem 0.2rem 0rem;
     font-family: "graphie", sans-serif;
     font-style: normal;
     font-size: 1.3rem;
@@ -192,6 +193,11 @@
     font-size: 1rem;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .pris {
+    font-style: normal;
+    font-size: 1.3rem;
   }
 
   @media (min-width: 601px) {
@@ -284,6 +290,7 @@
     var area = parseFloat(document.getElementById("area").value);
     var price = area * 1600;
 
-    document.getElementById("result").textContent = "Pris i danske kroner: " + price + " DKK";
+    document.getElementById("result").textContent = " Pris i danske kroner: " + price + " DKK";
+    document.getElementById("result").classList.add("pris");
   });
 </script>
