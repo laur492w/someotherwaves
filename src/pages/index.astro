@@ -7,7 +7,6 @@ import Video from "../components/Video.astro";
 import Omos from "../components/Omos.astro";
 import Landing from "../components/Landing.astro";
 import Galleri from "../components/Galleri.astro";
-import Header from "../components/Header.astro";
 
 const data = await fetch(
   "https://drcfwrjeugkktxrsdgby.supabase.co/rest/v1/some_other_waves?select=by,sted,værk,id,img",
@@ -23,7 +22,7 @@ console.log(data);
 ---
 
 <Layout />
-<Header />
+<Menu />
 <Menu />
 <Landing />
 <Video />
