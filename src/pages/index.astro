@@ -21,7 +21,7 @@ console.log(data);
 <Menu />
 <Landing />
 <Video />
-<div class="image-container">
+<div class="gallery-container">
   {
     data.map((galleri) => {
       return <Galleri data={galleri} />;
@@ -30,3 +30,11 @@ console.log(data);
 </div>
 <Omos />
 <Footer />
+
+<style>
+  .gallery-container {
+    display: flex;
+    overflow-x: scroll;
+    margin-left: 3em;
+  }
+</style>
