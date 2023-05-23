@@ -5,8 +5,9 @@ console.log(data);
 
 <article>
   <img src={"../gallery/" + data.img} alt={data.værk} />
-  <h1>{data.sted}</h1>
-  <h2>{data.by}</h2>
+  <h3>{data.værk}</h3>
+  <h4>{data.sted}</h4>
+  <h5>{data.by}</h5>
 </article>
 
 <style>
@@ -18,7 +19,12 @@ console.log(data);
     padding: 20px;
   }
 
-  article {
-    display: flex;
+  .image-container {
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+  .image-container {
+    overflow: auto;
+    white-space: nowrap;
   }
 </style>
