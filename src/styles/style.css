@@ -5,7 +5,7 @@
 
 html {
   --primary-color: white;
-  --secondary-color: blue;
+  --secondary-color: #2d509f;
   --contrast-color: #e6a169;
   --header-color: #ffeca6;
   --text-color: #121236;
@@ -16,7 +16,6 @@ html {
 body {
   background: var(--primary-color);
   margin: 0%;
-
   line-height: 1.6;
   color: var(--text-color);
 }
@@ -24,34 +23,71 @@ body {
 h1,
 h2,
 h3,
+h4,
+h5,
 .text_tittel {
-  font-family: adobe-jenson-pro-display, serif;
-  font-weight: 300;
+  font-family: "moret", serif;
+  font-weight: 400;
   font-style: normal;
+  color: var(--secondary-color);
 }
 
 h1 {
-  font-size: 3rem;
-  color: var(--text-color);
-  padding: 6rem;
+  font-size: 4rem;
 }
 
 h2 {
   font-size: 2.5rem;
 }
 
-h3 {
-  font-size: 1.5rem;
-  line-height: 1.25;
-  margin-bottom: 1rem;
+h3,
+h4,
+h5 {
+  font-size: 1rem;
 }
 
 p {
-  /* font-size: 1.3rem; */
   color: var(--text-color);
   font-family: "graphie", sans-serif;
-  /* font-weight: 100; */
   font-style: normal;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+@media (min-width: 800px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  .text_tittel {
+    font-family: "moret", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--secondary-color);
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3,
+  h4,
+  h5 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    color: var(--text-color);
+    font-family: "graphie", sans-serif;
+    font-style: normal;
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
 }
 
 section {
