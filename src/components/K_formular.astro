@@ -6,7 +6,7 @@
       <label class="kvm_p" for="area"> kvm^2 =</label>
       <p id="result"></p>
     </div>
-    <button type="submit"> <img src="../call-to-action.sg" alt="" /> BEREGN</button>
+    <button type="submit" class="beregn_knap">BEREGN</button>
   </form>
 
   <form name="kontakt" netlify>
@@ -67,7 +67,7 @@
       </label>
     </div>
 
-    <button>SEND DIN FORESPØRGSEL</button>
+    <button class="send_f_button">SEND DIN FORESPØRGSEL</button>
   </form>
 </main>
 
@@ -109,19 +109,6 @@
     width: 82%;
   }
 
-  button {
-    border: none;
-    background-color: var(--button-color);
-    border-radius: 25px;
-    padding: 1rem;
-    color: white;
-    font-family: "graphie", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-    font-size: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
   .form-felt {
     gap: 0; /* Add margin to the top of the input field */
   }
@@ -171,6 +158,28 @@
     font-size: 1.23rem;
   }
 
+  .beregn_knap {
+    border: solid 2px var(--contrast-color);
+    border-radius: 25px;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    color: var(--contrast-color);
+    background-color: var(--primary-color);
+    font-family: "graphie", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+  }
+  .beregn_knap:hover {
+    border: solid 2px var(--contrast-color);
+    border-radius: 25px;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    color: var(--primary-color);
+    background-color: var(--contrast-color);
+  }
+
   form {
     max-width: 1000px;
     margin-inline: auto;
@@ -185,9 +194,14 @@
     font-size: 1.3rem;
   }
 
-  button {
-    border: none;
+  .pris {
+    font-style: normal;
+    font-size: 1.3rem;
+  }
 
+  .send_f_button {
+    border: none;
+    background-color: var(--contrast-color);
     border-radius: 25px;
     padding: 1rem;
     color: white;
@@ -197,12 +211,6 @@
     font-size: 1rem;
     margin-left: auto;
     margin-right: auto;
-    margin: top;
-  }
-
-  .pris {
-    font-style: normal;
-    font-size: 1.3rem;
   }
 
   @media (min-width: 601px) {
@@ -240,11 +248,11 @@
 
     .kvm_p {
       padding-left: 1rem;
-      font-size: 1.4rem;
+      font-size: 1rem;
     }
   }
 
-  /* RADIO */
+  /* RADIO BUTTON */
   .container {
     display: block;
     position: relative;
@@ -296,15 +304,6 @@
   .container input:checked ~ .checkmark:after {
     display: block;
   }
-
-  /* Style the indicator (dot/circle)
-  .container .checkmark:after {
-    top: 0.37rem;
-    left: 0.37rem;
-    width: 0.5rem;
-    height: 0.5rem;
-    background: white;
-  } */
 </style>
 
 <script>
@@ -314,7 +313,7 @@
     var area = parseFloat(document.getElementById("area").value);
     var price = area * 1600;
 
-    document.getElementById("result").textContent = " Pris i danske kroner: " + price + " DKK";
+    document.getElementById("result").textContent = price + " DKK";
     document.getElementById("result").classList.add("pris");
   });
 </script>
