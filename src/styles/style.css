@@ -33,11 +33,11 @@ h5,
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 h3,
@@ -48,6 +48,14 @@ h5 {
 
 p {
   color: var(--text-color);
+  font-family: "graphie", sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+a {
+  color: var(--primary-color);
   font-family: "graphie", sans-serif;
   font-style: normal;
   font-size: 1rem;

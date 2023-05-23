@@ -1,5 +1,6 @@
 <main>
-  <form id="calculator">
+  <form id="calculator" class="beregn_boks">
+    <p class="beregn_boks_tekst">Beregn din cirka pris her:</p>
     <div class="beregn">
       <input type="number" id="area" class="beregn2" required />
       <label class="kvm_p" for="area"> kvm^2 =</label>
@@ -50,26 +51,6 @@
           <input type="radio" name="radio" />
           <span class="checkmark"></span>
         </label>
-        <!--
-            <label class="form-control">
-              <input type="radio" name="radio">
-              Loft
-            </label>
-
-            <label class="form-control">
-              <input type="radio" name="radio">
-              Væg
-            </label>
-
-            <label class="form-control">
-              <input type="radio" name="radio">
-              Loft og væg
-            </label>
-
-            <label class="form-control">
-              <input type="radio" name="radio">
-              Andet (angiv i 'ønsker til værket')
-            </label> -->
       </div>
 
       <div class="form-felt kvm">
@@ -162,9 +143,32 @@
     align-self: start;
   }
 
+  .kvm_p {
+    padding-left: 1rem;
+    font-size: 1rem;
+  }
+
   .beregn {
     display: flex;
     justify-content: center;
+  }
+
+  .beregn_boks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid black;
+    padding: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 6rem;
+  }
+
+  .beregn_boks_tekst {
+    padding-bottom: 1rem;
+    font-weight: 500;
+    font-size: 1.23rem;
   }
 
   form {
@@ -217,6 +221,14 @@
       grid-column: 2/5;
       padding-top: 2rem;
       padding-bottom: 3rem;
+    }
+
+    .beregn_boks {
+      border: solid black;
+      padding: 3rem;
+      margin-left: 11rem;
+      margin-right: 11rem;
+      margin-bottom: 8rem;
     }
   }
 
