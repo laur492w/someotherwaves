@@ -4,27 +4,45 @@ console.log(data);
 ---
 
 <article>
-  <img src={"../gallery/" + data.img} alt={data.værk} />
-  <h3>{data.værk}</h3>
-  <h4>{data.sted}</h4>
-  <h5>{data.by}</h5>
+  <div class="gallery">
+    <img src={"../gallery/" + data.img} alt={data.værk} />
+    <h3>{data.værk}</h3>
+    <h4>{data.sted}</h4>
+    <h5>{data.by}</h5>
+  </div>
 </article>
 
 <style>
-  img {
-    /* max-width: 40vw; */
-    width: 20%;
-    height: auto;
-    display: block;
-    padding: 20px;
+  .gallery-container {
+    width: 100%;
+    overflow-x: scroll;
   }
 
-  .image-container {
-    display: grid;
-    grid-template-rows: 1fr;
+  .gallery img {
+    width: 20vw;
+    height: auto;
+    margin-right: 10px;
   }
-  .image-container {
-    overflow: auto;
-    white-space: nowrap;
+
+  @media only screen and (max-width: 600px) {
+    .gallery-container {
+      width: 100%;
+      overflow-x: scroll;
+    }
+
+    .gallery img {
+      width: 60vw;
+      height: auto;
+      margin-right: 10px;
+    }
+  }
+
+  h3,
+  h4,
+  h5 {
+    color: var(--tertiary-color);
+  }
+
+  h3 {
   }
 </style>
