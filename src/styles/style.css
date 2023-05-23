@@ -23,7 +23,6 @@ body {
 
 h1,
 h2,
-h3,
 .text_tittel {
   font-family: "moret", serif;
   font-weight: 400;
@@ -40,16 +39,22 @@ h2 {
 }
 
 h3 {
+  font-family: "graphie book", sans-serif;
   font-size: 1rem;
 }
 
-h4,
-h5 {
-  font-size: 0.5em;
+h4 {
+  font-family: "graphie", sans-serif;
+  font-weight: 300;
+  font-size: 0.8em;
 }
-p,
-h4,
+
 h5 {
+  font-family: "graphie", sans-serif;
+  font-weight: 300;
+  font-size: 0.7em;
+}
+p {
   color: var(--text-color);
   font-family: "graphie", sans-serif;
   font-style: normal;
@@ -61,14 +66,12 @@ a {
   color: var(--primary-color);
   font-family: "graphie", sans-serif;
   font-style: normal;
-  font-size: 1rem;
   font-weight: 300;
 }
 
 @media (min-width: 800px) {
   h1,
   h2,
-  h3,
   .text_tittel {
     font-family: "moret", serif;
     font-weight: 400;
@@ -85,12 +88,16 @@ a {
   }
 
   h3 {
+    font-family: "graphie book", sans-serif;
     font-size: 1.5rem;
   }
 
-  h4,
+  h4 {
+    font-size: 1.1em;
+  }
+
   h5 {
-    font-size: 1em;
+    font-size: 0.9em;
   }
 
   p {

@@ -10,16 +10,11 @@
 </div>
 
 <style>
-  .text_tittel {
-    align-items: right;
+   .text_tittel {
+    text-align: center;
+    font-size: 3em;
   }
-  img {
-    /* max-width: 40vw; */
-    width: 100%;
-    height: auto;
-    display: block;
-    padding: 20px;
-  }
+ 
 
   .additional-text {
     padding: 20px;
@@ -29,6 +24,20 @@
     padding: 20px;
   }
   @media (min-width: 800px) {
+    img {
+    /* max-width: 40vw; */
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 20px;
+  }
+    .text_tittel {
+    align-items: right;
+    margin-right: 2em;
+    font-size: 3em;
+
+  }
+
     .tittel {
       display: flex;
       justify-content: flex-end;
@@ -69,11 +78,18 @@
       display: flex;
       align-items: start;
     }
-
+  }
     @media (max-width: 800px) {
+      img {
+    /* max-width: 40vw; */
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 20px;
+  }
       .additional-text {
         padding: 20px;
       }
     }
-  }
+  
 </style>
