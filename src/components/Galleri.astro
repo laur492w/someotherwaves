@@ -3,7 +3,6 @@ const { data } = Astro.props;
 console.log(data);
 ---
 
-
 <article>
   <div class="gallery">
     <img src={"../gallery/" + data.img} alt={data.værk} />
@@ -42,7 +41,7 @@ console.log(data);
   h4,
   h5 {
     color: var(--tertiary-color);
-    text-align: center;
+    /* text-align: center; */
   }
 
   h3 {

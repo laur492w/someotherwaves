@@ -21,19 +21,21 @@ const data = await fetch(
 console.log(data);
 ---
 
-<Menu />
-<Landing />
-<Video />
-<h1>VÆRKER</h1>
-<div class="gallery-container">
-  {
-    data.map((galleri) => {
-      return <Galleri data={galleri} />;
-    })
-  }
-</div>
-<Omos />
-<Footer />
+<Layout>
+  <Menu />
+  <Landing />
+  <Video />
+  <h1>VÆRKER</h1>
+  <div class="gallery-container">
+    {
+      data.map((galleri) => {
+        return <Galleri data={galleri} />;
+      })
+    }
+  </div>
+  <Omos />
+  <Footer />
+</Layout>
 
 <style>
   .gallery-container {
