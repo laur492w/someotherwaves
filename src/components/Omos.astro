@@ -1,7 +1,34 @@
 <div class="tittel">
   <h1 class="text_tittel">OM OS</h1>
 </div>
+<div class="section1"></div>
+<img src="../omos.webp" alt="Picture 1" class="image1" />
+  <p class="additional-text">Some Other Waves består af et sæt tvillinge-søstre Carla og Bjørk. Vi har alltid elsket at være kreative sammen og det falder os helt naturlight at samarbejde om kunsten. Siden vi var helt små har vi været på sommerferie med vores familie, rundt i det danske sommerland. Vi er derfor meget inspirerede af havet, dets farver, former og følelse. Det vi elsker alle mest ved det vi laver er at komme ud i en masse hjem og få lov til at sprede vores kunst ud i en masse hjem og få lov til at sprede vores kunst ud og give glæde, farver og inspiration til hjemmet. Vi har også været rundt hos Kulturhuse og andre erhvervsdrivende, som er lige så fedt, fordi vi her kommer ud til endnu flere, og kan bruges endnu bredere.</p>
+  
+<div class="section2">
+  <img src="../someotherwaves_10.webp" alt="Picture 2" class="image2" />
+  <p class="additional-text2">Vi laver som regel lidt skitser inden, afhængig af kundens ønsker. Men ellers griber vi rimelig hurtigt malerpensel og går i gang. Vi benytter økologisk maling, og vi blander vores farver med de helt grundlæggende primær farver. På den måde bliver værket altid helt unikt. De organiske former får virkelig lov til at tage deres plads, når vi arbejder. Derudover er muslinger og de finurlige kroppe også alltid med os i vores værker. Vi elsker dog at eksperimentere og den kunsteriske frihed er vigtig for os i vores proces og arbejde.</p>
+</div>
 
+
+<style>
+  .section2{
+    display: flex;
+  }
+
+  .section1{
+    display: flex;
+  }
+  img{
+    max-width: 20vw;
+  }
+
+
+
+</style>
+
+
+<!-- 
 <div class="grid">
   <img src="../omos.webp" alt="Picture 1" class="image1" />
   <p class="additional-text">Some Other Waves består af et sæt tvillinge-søstre Carla og Bjørk. Vi har alltid elsket at være kreative sammen og det falder os helt naturlight at samarbejde om kunsten. Siden vi var helt små har vi været på sommerferie med vores familie, rundt i det danske sommerland. Vi er derfor meget inspirerede af havet, dets farver, former og følelse. Det vi elsker alle mest ved det vi laver er at komme ud i en masse hjem og få lov til at sprede vores kunst ud i en masse hjem og få lov til at sprede vores kunst ud og give glæde, farver og inspiration til hjemmet. Vi har også været rundt hos Kulturhuse og andre erhvervsdrivende, som er lige så fedt, fordi vi her kommer ud til endnu flere, og kan bruges endnu bredere.</p>
@@ -16,13 +43,14 @@
     font-size: 3em;
   } 
 
-  .additional-text {
+  /* .additional-text {
     padding: 20px;
-  }
+  } */
 
-  .additional-text2 {
+  /* .additional-text2 {
     padding: 20px;
-  }
+  
+  } */
   @media (min-width: 800px) {
     img {
     /* max-width: 40vw; */
@@ -47,8 +75,10 @@
       /* grid-template-columns: 1fr 1fr; */
       /* grid-gap: 5px;
     padding: 20px; */
-      padding-right: 7em;
-      padding-left: 7em;
+      padding-right: 13em;
+      padding-left:13em;
+      margin: 0%;
+      padding-bottom: 5em;
     }
 
     .image1 {
@@ -62,6 +92,7 @@
       padding-bottom: 40px;
       padding-left: 20px;
       padding-top: 20px;
+      margin-right: 0%;
     }
 
     .image2 {
@@ -72,8 +103,8 @@
 
     .additional-text2 {
       grid-row: 3/4;
-      grid-column: 1/2;
-      margin-right: 2em;
+      grid-column: 1/;
+      /* margin-right: 2em; */
       padding-left: 20px;
       display: flex;
       align-items: start;
@@ -82,13 +113,19 @@
     @media (max-width: 800px) {
       img {
     /* max-width: 40vw; */
-    width: 80vw;
+    width: 70vw;
     height: auto;
     display: block;
     /* padding: 20px; */
-    
+    margin-bottom: 1em;
   }
 
+  .grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
   
       .additional-text {
         padding: 20px;
@@ -96,4 +133,4 @@
     
     }
   
-</style>
+</style> -->
