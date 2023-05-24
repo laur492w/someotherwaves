@@ -1,42 +1,55 @@
+<div class="footer">
 <div class="icons">
-  <img src="../icons/fb.svg" alt="Facebook" />
+  <a href="https://www.facebook.com/someotherwaves" target="_blank">
+<img src="../icons/fb.svg" alt="Facebook" />
+</a>
+<a href="https://www.instagram.com/someotherwaves/?hl=da" target="_blank">
   <img src="../icons/ig.svg" alt="Instagram" />
+</a>
+  <a href="mailto:bjoerknoerremark@gmail.com"target="_blank">
   <img src="../icons/mail.svg" alt="Mail" />
+</a>
 </div>
-<div class="links">
-  <p>FORSIDE</p>
-  <p>VÆRKER</p>
-  <p>KONTAKT OS</p>
 </div>
 
 <style>
   @media only screen and (max-width: 600px) {
+
+    a{
+
+width: 23vw;
+}
+    .footer{
+      margin-top: 3em;
+      margin-bottom: 2em;
+    }
     img {
       max-width: 10vw;
-      margin-right: 1em;
     }
 
     .icons {
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-left: 2em;
     }
 
-    .links {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    p {
-      margin-right: 1em;
-      font-size: 1.2em;
-    }
+
   }
 
   @media only screen and (min-width: 600px) {
+
+    a{
+
+      width: 5vw;
+    }
+    .footer{
+      margin-bottom: 2em;
+      margin-top: 3em;
+    }
     img {
       max-width: 4vw;
-      margin-right: 1em;
+      /* margin-right: 1em; */
     }
 
     .icons {
@@ -45,14 +58,6 @@
       align-items: center;
     }
 
-    .links {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    p {
-      margin-right: 1em;
-      font-size: 1em;
-    }
+  
   }
 </style>
