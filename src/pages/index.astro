@@ -8,16 +8,12 @@ import Omos from "../components/Omos.astro";
 import Landing from "../components/Landing.astro";
 import Galleri from "../components/Galleri.astro";
 
-const data = await fetch(
-  "https://drcfwrjeugkktxrsdgby.supabase.co/rest/v1/some_other_waves?select=by,sted,værk,id,img",
-  {
-    method: "GET",
-    headers: {
-      apikey:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRyY2Z3cmpldWdra3R4cnNkZ2J5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIzMzI0OTksImV4cCI6MTk5NzkwODQ5OX0.tVFF6acofD4-o5xDWJrDvCI41ayy7t1UhKHYklR7C0I",
-    },
-  }
-).then((res) => res.json());
+const data = await fetch("https://drcfwrjeugkktxrsdgby.supabase.co/rest/v1/some_other_waves?select=by,sted,værk,id,img", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRyY2Z3cmpldWdra3R4cnNkZ2J5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIzMzI0OTksImV4cCI6MTk5NzkwODQ5OX0.tVFF6acofD4-o5xDWJrDvCI41ayy7t1UhKHYklR7C0I",
+  },
+}).then((res) => res.json());
 console.log(data);
 ---
 
@@ -25,7 +21,7 @@ console.log(data);
   <Menu />
   <Landing />
   <Video />
-  <h1>VÆRKER</h1>
+  <h1 id="værker">VÆRKER</h1>
   <div class="gallery-container">
     {
       data.map((galleri) => {
@@ -38,6 +34,9 @@ console.log(data);
 </Layout>
 
 <style>
+  #værker {
+    scroll-margin-top: 100px;
+  }
   .gallery-container {
     display: flex;
     overflow-x: scroll;
