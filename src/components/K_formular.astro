@@ -1,3 +1,5 @@
+kontakt:
+
 <main>
   <form id="calculator" class="beregn_boks">
     <p class="beregn_boks_tekst">Beregn din cirka pris her:</p>
@@ -66,12 +68,37 @@
         <textarea name="besked" rows="5" class="boks"></textarea>
       </label>
     </div>
-
-    <button class="send_f_button">SEND DIN FORESPØRGSEL</button>
+    <div class="button-container">
+      <a href="#" class="button">
+        <img src="call-to-action-stor.svg" alt="Call to action" style="width: 248px; height: 100px; position: relative;" />
+        <span class="button-text">SEND DIN FORESPØRGSEL</span>
+      </a>
+    </div>
   </form>
 </main>
 
 <style>
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .button {
+    position: relative;
+    display: inline-block;
+  }
+
+  .button-text {
+    white-space: nowrap;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 400;
+    color: white;
+    font-size: 1rem;
+  }
+
   /* Dine styles her */
   main {
     max-width: 1000px;
