@@ -1,13 +1,12 @@
 <div>
   <h1>SOME OTHER WAVES</h1>
+  <p>Evighedskunst på vægge og loftet</p>
   <img src="../gallery/sow9.webp" alt="Maleri" />
   <div class="color-overlay"></div>
 </div>
 
 <div class="video">
-  <video src="../someotherwaves_2.mp4" autoplay controls loop>
-    Your browser does not support the video tag.</video
-  >
+  <video src="../someotherwaves_2.mp4" autoplay controls loop> Your browser does not support the video tag.</video>
 </div>
 
 <style>
@@ -27,6 +26,17 @@
     color: rgb(255, 255, 255);
   }
 
+  p {
+    position: absolute;
+    z-index: 1;
+    font-family: "moret", serif;
+    font-weight: 100;
+    font-size: 2.5vw;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    padding-top: 8rem;
+  }
+
   video {
     max-width: 75vw;
     margin-top: 2em;
@@ -38,20 +48,24 @@
     align-items: center;
   }
 
-  @media (max-width:800px){
+  @media (max-width: 800px) {
     h1 {
-    position: absolute;
-    z-index: 1;
-    font-family: "moret", serif;
-    font-weight: 400;
-    font-size: 10vw;
-    font-style: normal;
-    color: rgb(255, 255, 255);
-  }
+      position: absolute;
+      z-index: 1;
+      font-family: "moret", serif;
+      font-weight: 400;
+      font-size: 10vw;
+      font-style: normal;
+      color: rgb(255, 255, 255);
+    }
+
+    p {
+      padding-top: 5rem;
+    }
     video {
-    max-width: 93vw;
-    margin-top: 2em;
-    margin-bottom: 3em;
-  }
+      max-width: 93vw;
+      margin-top: 2em;
+      margin-bottom: 3em;
+    }
   }
 </style>
