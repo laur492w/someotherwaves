@@ -7,7 +7,7 @@ html {
   --primary-color: white;
   --secondary-color: #2d509f;
   --tertiary-color: #6289fc;
-  --contrast-color: #e6a169;
+  --contrast-color: #ea7b4b;
   --header-color: #ffeca6;
   --text-color: #121236;
   --button-color: #121236;
@@ -67,6 +67,21 @@ a {
   font-family: "graphie", sans-serif;
   font-style: normal;
   font-weight: 300;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+}
+
+.button-text {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 400;
+  color: white;
+  font-size: 0.9rem;
 }
 
 @media (min-width: 800px) {
