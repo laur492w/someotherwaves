@@ -9,7 +9,9 @@
     <button type="submit" class="beregn_knap">BEREGN</button>
   </form>
 
-  <form name="kontakt" netlify>
+  <p>Send en forespørgsel til os her, så vender vi tilbage til dig.</p>
+
+  <form name="kontakt" netlify class="form">
     <!-- Formular-indhold -->
     <div class="kontakt_grid1-1">
       <div class="form-felt">
@@ -66,16 +68,17 @@
         <textarea name="besked" rows="5" class="boks"></textarea>
       </label>
     </div>
-    <div class="button-container">
-      <a href="#" class="button">
-        <img src="call-to-action-stor.svg" alt="Call to action" style="width: 269px; height: 100px; position: relative;" />
-        <span class="button-text">SEND FORESPØRGSEL</span>
-      </a>
-    </div>
+    <button type="submit" class="send_f_button">SEND FORSPØRGSEL</button>
   </form>
 </main>
 
 <style>
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+  }
   .button-container {
     display: flex;
     justify-content: center;
@@ -197,6 +200,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 1.5rem;
+    cursor: pointer;
   }
   .beregn_knap:hover {
     border: solid 2px var(--contrast-color);
@@ -204,6 +208,7 @@
     padding: 0.5rem 1rem 0.5rem 1rem;
     color: var(--primary-color);
     background-color: var(--contrast-color);
+    cursor: pointer;
   }
 
   form {
@@ -226,17 +231,24 @@
   }
 
   .send_f_button {
-    border: none;
+    border: solid var(--primary-color);
     background-color: var(--contrast-color);
     border-radius: 25px;
     padding: 1rem;
-    color: white;
+    color: var(--primary-color);
     font-family: "graphie", sans-serif;
-    font-weight: 200;
+    font-weight: 500;
     font-style: normal;
     font-size: 1rem;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
+  }
+  .send_f_button:hover {
+    border: solid var(--contrast-color);
+    background-color: var(--primary-color);
+
+    color: var(--contrast-color);
   }
 
   @media (min-width: 601px) {
