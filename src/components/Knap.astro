@@ -1,21 +1,62 @@
-<a href="#" class="button">
-  <img src="call-to-action.svg" alt="Call to action" style="width: 111px; height: 100px; position: relative;" />
-  <span class="button-text">SE ALLE VÆRKER</span>
+---
+const { text, link, size = "medium" } = Astro.props;
+---
+
+<a href={link} class={`button ${size}`}>
+  <img src="call-to-action.svg" alt="Call to action" />
+  <span class="button-text">{text}</span>
 </a>
 
 <style>
+  .medium img {
+    width: 111px;
+    height: 100px;
+  }
+  .big img {
+    width: 140px;
+    height: 100px;
+  }
   .button {
+    display: flex;
     position: relative;
-    display: inline-block;
+    justify-content: center;
+    align-items: center;
   }
 
   .button-text {
     position: absolute;
-    top: 48%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight: 400;
     color: white;
     font-size: 0.9;
   }
+
+  @media (min-width: 800px) {
+    .medium img {
+      width: 150px;
+      height: 100px;
+    }
+    .big img {
+      width: 186px;
+      height: 100px;
+    }
+
+    .button-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: 500;
+      color: white;
+      font-size: 1.4rem;
+    }
+  }
 </style>
+
+<script>
+  export default {
+    props: ["title"],
+  };
+</script>

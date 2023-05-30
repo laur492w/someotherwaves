@@ -3,10 +3,10 @@ import Footer from "../components/Footer.astro";
 import Menu from "../components/Menu.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/style.css";
-
 import Omos from "../components/Omos.astro";
 import Landing from "../components/Landing.astro";
 import Galleri from "../components/Galleri.astro";
+import Knap from "../components/Knap.astro";
 
 const data = await fetch("https://drcfwrjeugkktxrsdgby.supabase.co/rest/v1/some_other_waves?select=by,sted,værk,id,img", {
   method: "GET",
@@ -20,6 +20,9 @@ console.log(data);
 <Layout>
   <Menu />
   <Landing />
+  <div>
+    <Knap link="#omos" text="OM OS" />
+  </div>
 
   <h1 id="værker">VÆRKER</h1>
   <div class="gallery-container">
@@ -29,13 +32,18 @@ console.log(data);
       })
     }
   </div>
+
+  <div>
+    <Knap link="#" text="SE MERE" />
+  </div>
   <Omos />
-  <Footer />
 </Layout>
+<Footer />
 
 <style>
   #værker {
     scroll-margin-top: 100px;
+    padding-top: 3rem;
   }
   .gallery-container {
     display: flex;
