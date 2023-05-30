@@ -1,14 +1,18 @@
-<a href="#" class="button">
-  <img src="call-to-action.svg" alt="Call to action" />
-  <span class="button-text">SE ALLE VÆRKER</span>
-</a>
+---
+const { text } = Astro.props;
+---
+
+<template>
+  <a href="#" class="button">
+    <img src="call-to-action.svg" alt="Call to action" style="width: 111px; height: 100px; position: relative;" />
+    <span class="button-text"><p>{text}</p></span>
+  </a>
+</template>
 
 <style>
   .button {
     position: relative;
     display: inline-block;
-    display: flex;
-    justify-content: center;
   }
 
   .button-text {
@@ -21,3 +25,9 @@
     font-size: 0.9;
   }
 </style>
+
+<script>
+  export default {
+    props: ["title"],
+  };
+</script>
