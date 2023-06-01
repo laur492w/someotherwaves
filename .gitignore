@@ -12,7 +12,7 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-
+.mp4
 # environment variables
 .env
 .env.production
