@@ -8,6 +8,10 @@ const { text, link, size = "medium" } = Astro.props;
 </a>
 
 <style>
+  .small img {
+    width: 90px;
+    height: 100px;
+  }
   .medium img {
     width: 111px;
     height: 100px;
@@ -38,6 +42,10 @@ const { text, link, size = "medium" } = Astro.props;
   }
 
   @media (min-width: 800px) {
+    .small img {
+      width: 145px;
+      height: 100px;
+    }
     .medium img {
       width: 150px;
       height: 100px;
