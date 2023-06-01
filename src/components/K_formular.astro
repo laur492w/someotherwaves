@@ -1,3 +1,7 @@
+---
+import Knap from "../components/Knap.astro";
+---
+
 <main>
   <form id="calculator" class="beregn_boks">
     <p class="beregn_boks_tekst">Beregn din cirka pris her:</p>
@@ -68,7 +72,9 @@
         <textarea name="besked" rows="5" class="boks"></textarea>
       </label>
     </div>
-    <button type="submit" class="send_f_button">SEND FORSPØRGSEL</button>
+    <div class="knap">
+      <Knap type="submit" class="send_f_button" link="kontakt" size="big" text="SEND FORESPØRGSEL" />
+    </div>
   </form>
 </main>
 
